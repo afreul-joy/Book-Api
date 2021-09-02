@@ -12,24 +12,14 @@ const btn = () => {
 }
 
 const gettingResult = (data) => {
-  console.log(data);
-  
+  // console.log(data);
   document.getElementById('search-result').innerText = data.length  
   const book = document.getElementById('book')
-  book.classList.add('col') 
-  // for (const item of data) {
-  //   console.log(item.author_name);
-  //   console.log(item.publish_year);
-  // }
-
 
   data.forEach(element => {
     // console.log(element);
-    // console.log(element.author_name);
-    // console.log(element.publish_year);
-    // console.log(element.title);
   const newBook = document.createElement('div')
-  
+  newBook.classList.add('col') 
   newBook.innerHTML =
     `
     <img src="https://covers.openlibrary.org/b/id/${element.cover_i}-M.jpg" class="img-fluid " alt="..."></img>
@@ -45,4 +35,3 @@ const gettingResult = (data) => {
  
 }
  
-//  <img src="https://covers.openlibrary.org/b/id/{cover_i}-M.jpg class="card-img-top" alt="..."></img>
